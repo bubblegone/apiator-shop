@@ -1,0 +1,2 @@
+app:
+  payment-check-url: ${PAYMENT_CHECK_URL}

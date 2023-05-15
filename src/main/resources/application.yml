@@ -1,0 +1,25 @@
+server:
+  port: ${port:8080}
+
+app:
+  storage: ${STORAGE_ROOT}
+  secret: ${JWT_SECRET}
+  payment-check-url: ${PAYMENT_CHECK_URL}
+
+spring:
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
+    driver-class-name: org.mariadb.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: ${OAUTH_ISSUER_URI}
+  server:
+    error:
+      include-message: always
